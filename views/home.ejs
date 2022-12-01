@@ -13,6 +13,15 @@
 	</div>
 	<div class="fb">
 		<div class="title">Facebook</div>
+		<fb:login-button
+				scope="public_profile,email"
+				onlogin="checkLoginState();">
+				function checkLoginState() {
+					FB.getLoginStatus(function(response) {
+						statusChangeCallback(response);
+					});
+				}
+			</fb:login-button>
 		<script>
 			window.fbAsyncInit = function() {
 				FB.init({
@@ -34,15 +43,6 @@
 				fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 			</script>
-			<fb:login-button
-				scope="public_profile,email"
-				onlogin="checkLoginState();">
-				function checkLoginState() {
-					FB.getLoginStatus(function(response) {
-						statusChangeCallback(response);
-					});
-				}
-			</fb:login-button>
 	</div>
 	<div class="title">Instagram</div>
 	<div class="title">Twitter</div>
