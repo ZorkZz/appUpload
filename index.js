@@ -7,6 +7,7 @@ const	client_key_tiktok = "awhkvttgqq218hlb";
 const	client_secret_tiktok = "ee148789e863c93b455644cff0bd700a";
 const	cors = require('cors');
 const	redirect_url = "http://localhost:3000/";
+const	port = process.env.PORT;
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -48,7 +49,7 @@ app.post("/send", (req, res) =>
 	}
 )
 
-app.listen(3000,	function(req, res)
+app.listen(port,	function(req, res)
 	{
 		console.log("connecte");
 	}
