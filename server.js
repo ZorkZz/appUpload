@@ -6,7 +6,7 @@ const	app = express();
 const	client_key_tiktok = "awhkvttgqq218hlb";
 const	client_secret_tiktok = "ee148789e863c93b455644cff0bd700a";
 const	cors = require('cors');
-const	redirect_url = "http://localhost:3000/";
+const	redirect_url = "https://appuploader.onrender.com/";
 const	port = process.env.PORT;
 
 app.set("view engine", "ejs");
